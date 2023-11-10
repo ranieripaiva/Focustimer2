@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Temporizador estilo pomodoro">
+    <title>Focus Timer - Pomodoro</title>
+    
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg">    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./src/main.js" defer></script>
+</head>
+<body>
+    <div id="app">      
+                 
+        <button id="toggle-mode">
+            <span class="sr-only">Ativar light mode</span>
+            <i class="ph-bold ph-sun"></i>
+            <i class="ph-bold ph-moon"></i>
+        </button>
+
+        <section id="timer">
+            <div class="flex">
+                <span id="minutes">25</span>
+                <span>:</span>
+                <span id="seconds">00</span>
+            </div>
+
+            <div id="controls" class="flex">
+                <button 
+                    data-action="toggleRunning" 
+                    class="ph ph-play-circle">                    
+                        <span class="sr-only">Iniciar contador</span>
+                </button>
+                <button
+                    data-action="reset" 
+                    class="ph ph-stop">                    
+                        <span class="sr-only">Parar contador</span>
+                </button>
+                <button
+                    data-action="setPlus"
+                    class="ph ph-plus">                    
+                        <span class="sr-only">Aumentar contador</span>
+                </button>
+                <button
+                    data-action="setMinus"
+                    class="ph ph-minus-circle">                    
+                        <span class="sr-only">Diminuir contador</span>
+                </button>                          
+            </div>
+        </section>
+        
+        <section id="ambiente" class="grid">
+            <div id="sounds">
+                <button>                      
+                    <img data-action="toggleSoundsFloresta" src="/assets/Card 01.svg" alt="Floresta">   
+                </button>
+                <button >                
+                    <img data-action="toggleSoundsChuva" src="/assets/Card 02.svg" alt="Chuva"> 
+                </button>            
+                <button >                
+                    <img data-action="toggleSoundsCafeteria" src="/assets/Card 03.svg" alt="Cafeteria"> 
+                </button>
+                <button >                 
+                    <img data-action="toggleSoundsLareira" src="/assets/Card 04.svg" alt="Lareira">           
+                </button>
+            </div>
+        </section>   
+    </div>
+</body>
+</html>
